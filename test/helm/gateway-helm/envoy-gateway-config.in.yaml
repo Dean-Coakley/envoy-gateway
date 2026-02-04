@@ -16,6 +16,9 @@ config:
         rateLimitDeployment:
           container:
             image: private-hub/envoyproxy/ratelimit:master
+        rateLimitHpa:
+          minReplicas: 1
+          maxReplicas: 3
     logging:
       level:
         default: debug

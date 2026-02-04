@@ -98,12 +98,15 @@ hpa:
   behavior: {}
 
 config:
-# -- EnvoyGateway configuration. Visit https://gateway.envoyproxy.io/docs/api/extension_types/#envoygateway to view all options.
+  # -- EnvoyGateway configuration. Visit https://gateway.envoyproxy.io/docs/api/extension_types/#envoygateway to view all options.
   envoyGateway:
     gateway:
       controllerName: gateway.envoyproxy.io/gatewayclass-controller
     provider:
       type: Kubernetes
+      # kubernetes:
+      #   rateLimitDeployment: {}
+      #   rateLimitHpa: {}
     logging:
       level:
         default: info

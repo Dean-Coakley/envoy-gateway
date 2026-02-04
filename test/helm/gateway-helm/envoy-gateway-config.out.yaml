@@ -50,6 +50,9 @@ data:
                     containers:
                     - imagePullPolicy: IfNotPresent
                       name: envoy-ratelimit
+        rateLimitHpa:
+          maxReplicas: 3
+          minReplicas: 1
         shutdownManager:
           image: docker.io/envoyproxy/gateway-dev:latest
       type: Kubernetes
